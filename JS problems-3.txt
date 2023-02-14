@@ -1,0 +1,48 @@
+      function check(){
+        var n = 23;
+        var sum = 0;
+        while(n%10!=0)
+        {
+          sum += n%10;
+          n = n/10;
+        }
+        if(sum%2!=0)  console.log("oddish")
+        else  console.log("even")
+      } */
+
+      //Binary search using recursion
+
+ /*      function recursiveBinarySearch(array,low,high,element){
+          console.log(low+" from 2nd if statement "+high+" and the search "+element);
+            if (high >= low){
+                var middle = Math.floor(low + (high - low)/2);
+                console.log(middle);
+                if (array[middle] == element){
+                  return middle;
+                }
+                if (array[middle] > element)
+                {
+                  console.log(array[middle]+" from 2nd if statement");
+                  return recursiveBinarySearch(array, low, middle-1, element);
+                }
+                else{
+                  console.log(array[middle]+" from else statement");
+                  return recursiveBinarySearch(array, middle+1, high, element);
+                }
+                }
+            return -1;
+        }
+var array = [1,2,34,4,5,6,8,7,9];
+var low = 0;
+var high = array.length - 1;
+var element = 8;
+ console.log(recursiveBinarySearch(array,0,high,element));
+
+
+// Concat array
+
+var arr = [1,2,3,44,4];
+ var arr2 = [69,35,67,88]
+ arr = arr.concat(arr2);
+ arr = arr.concat(10,23,3,4,44);
+ console.log(arr);
